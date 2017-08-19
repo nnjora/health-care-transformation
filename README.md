@@ -25,3 +25,4 @@ Once downloaded, the application can be locally started with:
 ```
 mvn tomcat7:run
 ```
+Which will start a Tomcat server you can access at: http://localhost:8080/editransform
