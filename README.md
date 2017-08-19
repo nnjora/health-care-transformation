@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+## Simple EDI Transormation 
 
-You can use the [editor on GitHub](https://github.com/nnjora/health-care-transformation/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Given the complexity in many healthcare EDI transactions, it is sometimes tedious to process the EDI transactions without investing in an expensive transformation engine.  This project attempts to simplify that process by using simple open source tools to create java project that allows you to start processing healthcare transactions.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+We will create a simple application using the open source smooks library to transform healthcare EDI transactions to XML and vice versa.
 
-### Markdown
+### Main Libraries Used
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1.  Smooks  :-  We use [Smooks framework](http://www.smooks.org/) to build and transform data from XML and non XML data (CSV, EDI, Java etc) using Java.
+2.  Maven   :-  We use [Apache Maven](https://maven.apache.org/) for dependency and build management. 
+3.  Camel   :-  We use [Apache Camel](http://camel.apache.org/) to define routing and mediation rules.
 
-```markdown
-Syntax highlighted code block
+We use additional libraries as defined in the pom to support ancillary tasks within the application.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Running application locally
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+First, you will have to download it. If you have a local installation of git, you can do it by simply cloning this repository:
 ```
+git clone https://github.com/nnjora/health-care-transformation.git
+```
+If you don't have git installed, you can download a .zip by pressing on the Download zip button in the upper side of this page.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nnjora/health-care-transformation/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Once downloaded, the application can be locally started with:
+```
+mvn tomcat7:run
+```
